@@ -59,4 +59,8 @@ public final class Valhalla: ValhallaProviding {
     public func route(rawRequest request: String) -> String {
         actor!.route(request)
     }
+
+    public func height(rawRequest request: String) -> String {
+        actor!.height(request)
+    }
 }

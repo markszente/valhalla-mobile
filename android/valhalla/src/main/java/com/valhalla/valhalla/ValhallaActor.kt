@@ -2,6 +2,7 @@ package com.valhalla.valhalla
 
 interface ValhallaActorProviding {
   fun route(request: String): String
+  fun height(request: String): String
 }
 
 /**
@@ -22,5 +23,9 @@ class ValhallaActor(private val configPath: String) : ValhallaActorProviding {
    */
   override fun route(request: String): String {
     return valhallaKotlin.route(request, configPath)
+  }
+
+  override fun height(request: String): String { 
+    return valhallaKotlin.height(request, configPath)
   }
 }

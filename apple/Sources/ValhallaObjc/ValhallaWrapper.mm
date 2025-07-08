@@ -40,6 +40,19 @@
     }
 }
 
+- (NSString*)height:(NSString*)request
+{
+    @synchronized(self) {
+        // Convert the NSString to std::string
+        std::string req = std::string([request UTF8String]);
+        
+        // Generate the elevation response
+        std::string res = height(req.c_str(), _actor);
+        
+        return [NSString stringWithUTF8String:res.c_str()];
+    }
+}
+
 - (void) dealloc
 {
     delete_valhalla_actor(_actor);

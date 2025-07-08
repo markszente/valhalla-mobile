@@ -26,3 +26,13 @@ std::string ValhallaActor::route(const std::string& request) {
     
     return result;
 }
+
+std::string ValhallaActor::height(const std::string& request) {
+    // Convert the request to a std::string
+    std::string req = std::string(request);
+    
+    // Produce the height result
+    std::string result = actor.height(req);
+    
+    return result;
+}
