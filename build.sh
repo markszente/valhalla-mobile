@@ -45,7 +45,7 @@ move_android_so() {
         echo "Moving .so files for Android architecture: $arch"
         ./scripts/move_android_so.sh "$arch"
     fi
-}
+} 
 
 if [ -d "$(pwd)/vcpkg" ]; then
   export VCPKG_ROOT="$(pwd)/vcpkg"
